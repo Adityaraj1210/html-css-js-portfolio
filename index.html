@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Aditya Raj</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Aditya Raj</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src=".\assets\Untitled-design-2.png" alt="Aditya Raj Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Aditya Raj</h1>
+            <p class="section__text__p2">Passionate Data Analyst</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Aditya_Resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info.
+                </button>
+            </div>
+            <div id="socials-container">
+                <!-- <img src="./assets/linkedin.png" alt="My linkedin Profile"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/aditya-raj-84b553227/'"> -->
+                <img src="./assets/linkedin.png" alt="My linkedin Profile"
+                class="icon" onclick="window.open('https://www.linkedin.com/in/aditya-raj-84b553227/')">
+                <img src="./assets/github.png" alt="My Github Profile"
+                class="icon" onclick="window.open('https://github.com/Adityaraj1210')">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1"> Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src=".\assets\Profile-pic-aditya.jpg" alt="Profile picture" class="about-pic">
+            </div>
+            <div class = about-details-container>
+                <div class="text-container"> 
+                    <p>
+                        This is Aditya Raj, a final-year BTech undergraduate at the National Institute of Technology Patna,
+                        majoring in Mechanical Engineering. So far in BTech, he participated in several National-level case-study competition and 
+                        developed his skills in data Analytics domain. Also, he completed several key Projects in the same domain. 
+                        Aditya is extremely passionate about consulting, data-analytics,
+                        Dev-ops in general. Also, Aditya likes to explore the field of Photography as his hobby.
+                    </p>
+                    <!----------------------------- inspiraton from Great Stack ------------------------>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')"> Education</p>
+                        <p class="tab-links" onclick="opentab('skills')"> Skills</p>
+                        <!-- <p class="tab-links" onclick="opentab('experience')"> Experience</p> -->
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2021 - Present</span><br>B.Tech in Mechanical Engineering<br>National Institute of Technology Patna</li>
+                            <li><span>2020</span><br>12th from Doon Sr. Sec School</li>
+                            <li><span>2018</span><br>Matriculation from D.A.V Public School, Malighat</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Technical-Skills:</span><br>MS Excel, Power BI, EDA, Statistical Analysis, AWS, Git</li>
+                            <li><span>Language/Libraries:</span><br>HTML, CSS, JavaScript, SQL, Python, Pandas, Numpy, Matplotlib</li>
+                            <li><span>Soft-Skills</span><br>Communication, Adaptability, Problem-Solving, Team Work, Leadership</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="about-containers">
+                    <div class="details-container">
+                        <img src=".\assets\experience.png" alt="Education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>Bachelor of Technology <br />National Institue of Technology Patna</p>
+                    </div>
+                    <div class ="details-container">
+                        <img src=".\assets\experience.png" alt="Experience icon" class="icon">
+                        <h3>Skills</h3>
+                        <p>
+                            <li>hhdhsj</li>
+                        </p>
+                        <p>Fresher <br />Advanced Mathematics Expert</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <img src=".\assets\arrow.png" alt="Arrow icon" class="icon arrow"
+        onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Accenture</h2>
+                    <p>Data Analytics Job Simulation</p>
+                    <div class="list-container">
+                        <span class="date">Sep'2024</span>
+                        <p class="mt-4">Accenture is a global professional services company with leading capabilities in digital, cloud and security. 
+							<ul>
+								<li>Completed a simulation focused on advising a hypothetical social media client as a Data Analyst to understand the genres trend.</li>
+								<li>Cleaned, modelled, and analyzed 7 datasets to uncover insights into content trends to inform strategic data-driven decisions.</li>
+								<li>Prepared a PowerPoint deck and video presentation to communicate key insights for the client and internal stake-holders.</li>
+							</ul>
+						</p>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Chegg India</h2>
+                    <p>Subject Matter Expert</p>
+                    <div class="list-container">
+                        <span class="date">2021-Present</span>
+                        <p class="mt-4">Chegg, Inc., is an American education technology company. It provides homework help, 
+                            online tutoring, and other student services.
+							<ul>
+								<li>Tutor of Advanced Mathematics at Chegg India, providing comprehensive guidance and support to students.</li>
+								<li>Provided instant Chegg answers of 50+ questions and assisted students in resolving their doubts and questions.</li>
+								<li>Maintained a QC score above 4/5 and achieved a highest CF score of 80%.</li>
+							</ul>
+						</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+        onclick="location.href='./#projects'">
+    </section>
+    <section id="projects">
+        <p class="section__text__p1"> Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src=".\assets\project_1.png" alt="project pic">
+                <div class="layer">
+                    <h3>Pizza Sales Analysis</h3>
+                    <p>This project focuses on calculating key performance indicators and 
+                        identifying trends to gain insights into business performance.</p>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Adityaraj1210/Pizza_Sales_Analysis'">
+                            Github
+                        </button>
+                </div>
+            </div>
+            <div class="work">
+                <img src=".\assets\project_2.png" alt="project pic">
+                <div class="layer">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>This Project shows Lorem ipsum dolor sitcing elit. 
+                        Reprehenquienim nat Lorem ipsum dolor sitcing elit</p>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Adityaraj1210/Customer-Churn-Prediction/tree/main'">
+                            Github
+                        </button>
+                </div>
+            </div>
+            <div class="work">
+                <img src=".\assets\Profile-pic-aditya.jpg" alt="project pic">
+                <div class="layer">
+                    <h3>Movie Recommendation</h3>
+                    <p>This Project shows Lorem ipsum dolor sitcing elit. 
+                        Reprehenquienim nat Lorem ipsum dolor sitcing elit</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Github
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+        onclick="location.href='./#contact'">
+    </section>
+    <section id="contact">
+        <p class="section__text__p1"> Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:aditya12102003raj@gmail.com">Aditya12102003raj@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="lLnkedin icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/aditya-raj-84b553227/">Linkedin</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Aditya Raj. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
